@@ -1,9 +1,39 @@
-body{
-    background-image: url(./Imagens/lua.fundo.jpeg);
-    
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
+body {
+    /*
+    Forma resumida
+      background: url(./Imagens/dia.fundo.maior.jpeg) no-repeat top center/cover;
 
+    */
+  
+
+    background-image: url('./Imagens/dia.fundo.maior.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+
+    margin: 0; 
+    /* Remove margens padrão do corpo */
+    padding: 0; 
+    /* Remove preenchimento padrão do corpo */
+    height: 100vh; 
+    /* Garante que o corpo ocupe 100% da altura da tela */
+}
+
+#container{
+    width: 360px;
+    height: 712px;
+    border: 4px solid rebeccapurple;
+    margin: auto;
+}
+/*
+#profile {
+   text-align: center; 
+}
+*/
+#profile img{
+    display: block;
+    border-radius: 50%;
+    width: 112px;
+    margin: auto;
 
 }

@@ -7,13 +7,15 @@
 :root{
     --text-color: rgb(255, 230, 0);
     --bg-url: url(./Imagens/line_obliquely.jpg.jpg);
-    --fonte-map: 'Rubik Maps', sans-serif 
+    --fonte-map: 'Rubik Maps', sans-serif; 
+    --borda: 50px;
 }
 
 .light{
   --text-color: white;
   --bg-url: url(./Imagens/1308898.jpg);
-  --fonte-map: 'Rubik Scribble', sans-serif
+  --fonte-map: 'Rubik Scribble', sans-serif;
+  --borda: 8px;
 }
 
 body {
@@ -73,6 +75,20 @@ body *{
 
 }
 
+#switch{
+    font-weight: 800;
+    line-height: 24px;
+    margin-top: 8px;
+
+    border-radius: 50%;
+    width: 112px;
+    margin-right: auto;
+    
+    background: red url(./Imagens/avatar2.jpeg) no-repeat center;
+   
+    
+}
+
 ul{
     list-style: none;
     display: flex;
@@ -90,7 +106,7 @@ ul li a{
    
     background: rgba(255, 255, 255, 0.1);
     border: solid 2px rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
+    border-radius: var(--borda); 
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
 

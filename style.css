@@ -9,6 +9,11 @@
     --bg-url: url(./Imagens/line_obliquely.jpg.jpg);
     --fonte-map: 'Rubik Maps', sans-serif; 
     --borda: 50px;
+    --button: url(./sol.svg);
+    --stroke-color: rgba(255, 255, 255, 0.2);
+    --surface-color: rgba(255, 255, 255, 0.3);
+    --surface-color-houver: rgba(255, 255, 255, 0.3);
+    --highlight-color: rgba(255, 255, 255, 0.5);
 }
 
 .light{
@@ -16,6 +21,11 @@
   --bg-url: url(./Imagens/1308898.jpg);
   --fonte-map: 'Rubik Scribble', sans-serif;
   --borda: 8px;
+  --button: url(./lua.svg);
+  --stroke-color: rgba(255, 255, 255, 0.2);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-houver: rgba(255, 255, 255, 0.5);
+  --highlight-color: rgba(255, 255, 255, 0.5);
 }
 
 body {
@@ -76,17 +86,53 @@ body *{
 }
 
 #switch{
-    font-weight: 800;
-    line-height: 24px;
-    margin-top: 8px;
+    
+    position: relative;
+    width: 64px;
 
-    border-radius: 50%;
-    width: 112px;
-    margin-right: auto;
+    margin: 4px auto;
+        
+
     
-    background: red url(./Imagens/avatar2.jpeg) no-repeat center;
-   
+}
+
+#switch button{ 
+   width: 32px;
+   height: 32px;
+   background: white var(--button) no-repeat center;
+    border: 0px;
+   border-radius: 50%;
+   background-size: 25px;
+/* background-position: center;   */
+
+    /* Posição*/
+    position: absolute;
+    left: 0;
     
+    z-index: 1;
+
+    
+    transform: translateY(-50%);
+    top: 50%;
+    
+
+}
+
+.light #switch button{
+    right: 0;
+    left: initial;
+}
+
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 999px;
+
 }
 
 ul{
@@ -104,8 +150,8 @@ ul li a{
     justify-content: center;
     padding: 16px 24px;
    
-    background: rgba(255, 255, 255, 0.1);
-    border: solid 2px rgba(255, 255, 255, 0.2);
+    background: var(--surface-color);
+    border: solid 2px var(--stroke-color);
     border-radius: var(--borda); 
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -119,8 +165,8 @@ ul li a{
 
 ul li a:hover{
 
-    background: rgba(255, 255, 255, 0.3);
-    border: solid 2px rgba(255, 255, 255, 0.4);
+    background: var(--surface-color-houver);
+    border: solid 2px var(--text-color);
 
 }
 
@@ -147,7 +193,7 @@ ul li a:hover{
 }
 
 #social-links a:hover{
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--highlight-color);
 }
 
 

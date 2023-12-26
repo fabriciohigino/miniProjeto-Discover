@@ -8,7 +8,11 @@ function toggleMode(){
     }
 
 //    html.classList.toggle('light')    
-
-
+const img =document.querySelector("#profile img")
+    if(html.classList.contains("light")){
+        img.setAttribute("src", "./Imagens/avatar2.jpeg")
+    }else{
+        img.setAttribute("src", "./Imagens/avatar2.jpeg")
+    }
 
 }

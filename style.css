@@ -55,8 +55,8 @@ body *{
 }
 
 #container{
-    width: 360px;
-    height: 712px;
+    width: 100%;
+    max-width: 588px;
   /*border: 4px solid rebeccapurple;  
     padding-top: 56px;          */
     margin: 56px auto 0px;
@@ -66,7 +66,7 @@ body *{
 
 #profile {
    text-align:center;
-   padding: 24px;
+   padding: 1px;
 }
 
 #profile p{
@@ -196,11 +196,20 @@ ul li a:hover{
     background: var(--highlight-color);
 }
 
-
  footer {
     font-family:var(--fonte-map);
-    padding: 24px 0px;
+   /* padding: 24px 0px; */
     text-align: center;
     font-size: 35px;
     
+ }
+
+ /* Media queries */
+ @media(min-width: 700px){
+    :root{      
+        --bg-url: url(./Imagens/line_obliquely.jpg.jpg);
+    }
+    .light{
+        --bg-url: url(./Imagens/1308898.jpg);
+    }
  }

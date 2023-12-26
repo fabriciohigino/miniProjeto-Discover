@@ -48,7 +48,6 @@ body {
 }
 
 body *{
-    
     font-family: 'Inter', sans-serif;
     color:var(--text-color);
 
@@ -70,7 +69,6 @@ body *{
 }
 
 #profile p{
-    
     font-weight: 800;
     line-height: 24px;
     margin-top: 8px;
@@ -85,15 +83,11 @@ body *{
 
 }
 
-#switch{
-    
+#switch{ 
     position: relative;
-    width: 64px;
+    width: 69px;
+    margin: 8px auto 0px;
 
-    margin: 4px auto;
-        
-
-    
 }
 
 #switch button{ 
@@ -111,19 +105,25 @@ body *{
     
     z-index: 1;
 
-    
     transform: translateY(-50%);
     top: 50%;
     
+    animation: slide-back 0.2s
 
 }
 
 .light #switch button{
-    right: 0;
-    left: initial;
+   animation: slide-in 0.2s forwards;
+    /* right: 0;
+    left: initial; */
+}
+
+#switch button:hover{
+    outline: 7px solid var(--surface-color-houver);
 }
 
 #switch span{
+
     display: block;
     width: 64px;
     height: 24px;
@@ -141,6 +141,7 @@ ul{
     flex-direction: column;
     gap: 16px;
     padding: 24px 0px;
+    margin-top: 10px;
 }
 
 ul li a{
@@ -171,10 +172,9 @@ ul li a:hover{
 }
 
 #social-links{
-    
     display: flex;
     justify-content: center;
-    padding: 24px 0px;
+    padding: 15px 0px;
     font-size: 24px;
     
    
@@ -209,7 +209,25 @@ ul li a:hover{
     :root{      
         --bg-url: url(./Imagens/line_obliquely.jpg.jpg);
     }
+
     .light{
         --bg-url: url(./Imagens/1308898.jpg);
     }
  }
+
+ /* animation*/
+@keyframes slide-in{
+    from{
+        left: 0;
+    }to{
+        left: 50%;
+    }
+}
+
+@keyframes slide-back{
+    from{
+        left: 50%;
+    }to{
+        left: 0;
+    }
+}

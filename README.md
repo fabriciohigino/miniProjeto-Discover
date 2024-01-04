@@ -1,7 +1,7 @@
 # MiniProjeto-Discover
  ## Curso-Discover 
 
- > [Link da pagina](https://fabriciohigino.github.io/miniProjeto-Discover/)
+ > [🔗 Clique aqui para acessar](https://fabriciohigino.github.io/miniProjeto-Discover/)
 
 ![preview](./Imagens/Readme.jpg)
 
